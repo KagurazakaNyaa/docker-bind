@@ -1,7 +1,9 @@
-version: '2'
+version: '3'
 
 services:
   bind:
+    container_name: bind
+    hostname: bind
     restart: always
     image: kagurazakanyaa/bind
     ports:

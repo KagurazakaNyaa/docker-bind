@@ -1,6 +1,4 @@
-[![Circle CI](https://circleci.com/gh/sameersbn/docker-bind.svg?style=shield)](https://circleci.com/gh/sameersbn/docker-bind) [![Docker Repository on Quay.io](https://quay.io/repository/sameersbn/bind/status "Docker Repository on Quay.io")](https://quay.io/repository/sameersbn/bind)
-
-# sameersbn/bind:9.16.1-20200524
+# kagurazakanyaa/bind
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
@@ -44,18 +42,16 @@ If the above recommendations do not help then [report your issue](../../issues/n
 
 ## Installation
 
-Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/sameersbn/bind) and is the recommended method of installation.
-
-> **Note**: Builds are also available on [Quay.io](https://quay.io/repository/sameersbn/bind)
+Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/kagurazakanyaa/bind) and is the recommended method of installation.
 
 ```bash
-docker pull sameersbn/bind:9.16.1-20200524
+docker pull kagurazakanyaa/bind
 ```
 
 Alternatively you can build the image yourself.
 
 ```bash
-docker build -t sameersbn/bind github.com/sameersbn/docker-bind
+docker build -t kagurazakanyaa/bind github.com/kagurazakanyaa/docker-bind
 ```
 
 ## Quickstart
@@ -66,7 +62,7 @@ Start BIND using:
 docker run --name bind -d --restart=always \
   --publish 53:53/tcp --publish 53:53/udp --publish 10000:10000/tcp \
   --volume /srv/docker/bind:/data \
-  sameersbn/bind:9.16.1-20200524
+  kagurazakanyaa/bind
 ```
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
@@ -124,7 +120,7 @@ To upgrade to newer releases:
   1. Download the updated Docker image:
 
   ```bash
-  docker pull sameersbn/bind:9.16.1-20200524
+  docker pull kagurazakanyaa/bind
   ```
 
   2. Stop the currently running image:
@@ -144,7 +140,7 @@ To upgrade to newer releases:
   ```bash
   docker run -name bind -d \
     [OPTIONS] \
-    sameersbn/bind:9.16.1-20200524
+    kagurazakanyaa/bind
   ```
 
 ## Shell Access
